@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Experiment is running {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h1>Experiment is running</h1>
+        <p>Wait for touchless sensation appearance!</p>
+
+        <div class="card">
+            <div class="card-body" style="text-align: center;">
+                <button type="button" class="btn btn-danger btn-lg"><a href="{{ url_for('.experiment_stopped', experiment_id=experiment_id) }}"
+                                                                       style="text-decoration: none; color: #fff;">Stop</a>
+                </button>
+                <button type="button" class="btn btn-secondary"><a href="{{ url_for('.experiment_finished', experiment_id=experiment_id) }}"
+                                                                   style="text-decoration: none; color: #fff;">Finished</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

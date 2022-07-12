@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<script type="text/javascript" charset="utf-8" xmlns="http://www.w3.org/1999/html">
+    $(document).ready(function () {
+
+        namespace = '/test';
+        var socket = io(namespace);
+        $('form#run_experiment').submit(function (event) {
+            socket.emit('my_event', {data: 'LOOOOK'});
+            return true;
+        });
+        socket.on('redirect', function (data) {
+            window.location = data.url;
+        });
+    });
+</script>
+<div class="card">
+    <div class="card-body">
+        <h1 style="text-align: center;">Ready to start ?</h1>
+        <div class="card-body" style="text-align: center;">
+<!--            <form action="" id="run_experiment">-->
+<!--                <input type="submit" class="btn btn-success btn-lg" value="yes">-->
+<!--            </form>-->
+                        <button type="button" class="btn btn-success btn-lg"><a
+                                href="{{ url_for('.experiment_running', experiment_id=experiment_id) }}"
+                                style="text-decoration: none; color: #fff;">Yes</a>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-lg"><a href="/"
+                                                                               style="text-decoration: none; color: #fff;">No</a>
+                        </button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

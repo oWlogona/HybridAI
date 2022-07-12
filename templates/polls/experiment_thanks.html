@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Thank you for your effort ?{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h1>Thank you for your effort</h1>
+        <p>You did a great job.We hope you like it.</p>
+        <p>Would you like to try another sensation?</p>
+        <div class="card">
+            <div class="card-body" style="text-align: center;">
+                <button type="button" class="btn btn-success btn-lg"><a href="/experiments"
+                                                                        style="text-decoration: none; color: #fff;">Yes</a>
+                </button>
+                <button type="button" class="btn btn-danger btn-lg"><a href="/finished"
+                                                                       style="text-decoration: none; color: #fff;">No</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

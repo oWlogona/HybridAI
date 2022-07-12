@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h1>Experiment information</h1>
+        <p>In the next couple of minues you are goint to experience mid-air haptic sensations!</p>
+        <p>Before the experiment we would like to give you some necessary information:</p>
+
+        <div class="card">
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item" style="border: none;">
+                        <span style="padding: 10px 15px; border-radius: 5px; color: #ffffff; background:#A03335FF;">1</span>
+                        Keep your hand 20 cm above the device during the experiment.
+                    </li>
+                    <li class="list-group-item" style="border: none;"><span
+                            style="padding: 10px 15px; border-radius: 5px; color: #ffffff; background:#A03335FF;">2</span>
+                        Make sure, all your whole hand os above device during the experiment
+                    </li>
+                    <li class="list-group-item" style="border: none;"><span
+                            style="padding: 10px 15px; border-radius: 5px; color: #ffffff; background:#A03335FF;">3</span>
+                        In one experiment you will test 1 pattern.
+                    </li>
+                    <li class="list-group-item" style="border: none;"><span
+                            style="padding: 10px 15px; border-radius: 5px; color: #ffffff; background:#A03335FF;">4</span>
+                        At the end of experiment, evaluate the sensation and share with us your
+                        feedback.
+                    </li>
+                    <li class="list-group-item" style="border: none;"><span
+                            style="padding: 10px 15px; border-radius: 5px; color: #ffffff; background:#A03335FF;">5</span>
+                        You can pause or stop the experiment whenever it is needed.
+                    </li>
+                    <li class="list-group-item" style="border: none;"><span
+                            style="padding: 10px 15px; border-radius: 5px; color: #ffffff; background:#A03335FF;">6</span>
+                        You can repeat each sensation 3 times.
+                    </li>
+                </ul>
+                <br>
+                <button type="button" class="btn btn-danger"><a href="/experiments"
+                                                                style="text-decoration: none; color: #fff;">Continue</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

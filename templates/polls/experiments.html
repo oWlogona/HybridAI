@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Experiments List{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <ul class="list-group">
+            {% for experiment in experiment_list %}
+            <li class="list-group-item">
+                <a href="{{ url_for('.experiment_ready', experiment_id=experiment.id) }}"
+                   style="color: black; text-decoration: none;padding: 10px 15px;">{{
+                    experiment.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
